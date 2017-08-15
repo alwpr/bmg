@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.mariliagabriela.banda"
+        version   = "1.0.0">
+
+    <name>Banda Marília Gabriela</name>
+
+    <description>Banda Marília Gabriela.</description>
+
+    <author href="http://mobiweb.com.br" email="contato@mobiweb.com.br">
+        Equipe Mobi Web
+    </author>
+
+    <!--
+         Se você não quer que nenhuma permissão para ser adicionado ao seu aplicativo, adicione o
+        seguinte tag no seu config.xml; você ainda terá a INTERNET
+        permissão em sua aplicação, que exige PhoneGap.
+    -->
+    <preference name="permissions"                value="none"/>
+
+       <!-- Personalize seu aplicativo e da plataforma com o elemento de preferência. -->
+    <preference name="orientation"                value="portrait" />        <!-- todos: meios padrão paisagem e retrato estão habilitados -->
+    <preference name="target-device"              value="handset" />      <!-- todos: valores possíveis telefone, tablet ou universal -->
+    <preference name="fullscreen"                 value="true" />           <!-- todos: oculta a barra de status na parte superior da tela -->
+    <preference name="webviewbounce"              value="true" />           <!-- ios: controle se a tela 'salta' quando rolado além da parte superior -->
+    <preference name="prerendered-icon"           value="true" />           <!-- Ios: se o ícone é prerendered, iOS não vai aplicá-la é brilho para o ícone do aplicativo na tela inicial do usuário -->
+    <preference name="stay-in-webview"            value="false" />          <!-- Ios: links externos devem abrir no navegador padrão, 'true' usaria o webview o aplicativo vive em -->
+    <preference name="ios-statusbarstyle"         value="black-opaque" />   <!-- Ios: Preto-translúcida aparecerão preto porque o webview PhoneGap não ir abaixo da barra de status -->
+    <preference name="detect-data-types"          value="true" />           <!-- IOS:! Controla se os tipos de dados (. Tais como telefone não e datas) são automaticamente transformados em links pelo sistema -->
+    <preference name="exit-on-suspend"            value="false" />          <!-- Ios: se definido como verdadeiro, app irá terminar quando o botão é pressionado casa -->
+    <preference name="show-splash-screen-spinner" value="true" />           <!-- Ios: se for definido como false, o spinner não aparece na tela de abertura durante o carregamento app -->
+    <preference name="auto-hide-splash-screen"    value="true" />           <!-- Ios: se for definido como false, a tela inicial deve ser escondido usando uma API JavaScript -->
+	<preference name="disable-cursor"             value="false" />          <!-- blackberry : impede que um mouse de ícone / cursor seja exibido no aplicativo -->
+    <preference name="android-installLocation"    value="auto" />           <!-- Android: instalação de aplicativos de localização. 'auto' vai escolher. 'InternalOnly' é a memória do dispositivo. 'preferExternal' é SDCard. -->
+    <!--
+        Definir uma versão específica do PhoneGap para construir em seu aplicativo.
+        <preference name="phonegap-version"       value="3.5.0" />
+    -->
+
+    <!-- Plugins -->
+
+    <!-- Core plugins -->
+
+   
+   
+    <plugin name="cordova-plugin-device" />
+    <plugin name="cordova-plugin-device-orientation" />
+    <plugin name="cordova-plugin-inappbrowser" />
+    <plugin name="cordova-plugin-network-information" />
+    <plugin name="cordova-plugin-splashscreen" />
+
+
+     <!-- Plugins de terceiros -->
+    <!-- Uma lista de plugins disponíveis estão disponíveis em https://build.phonegap.com/plugins -->
+    <!--
+        <plugin name="com.phonegap.plugins.barcodescanner" />
+    -->
+
+    <!-- Definir ícone do aplicativo para cada plataforma. -->
+    <icon src="icon.png" />
+    <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+    
+	
+	<!--  falta definir mais icons para ios -->
+<!--
+    <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+
+-->
+        <!-- Definir splashscrenn do aplicativo para cada plataforma. -->
+    <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="res/screen/android/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="res/screen/android/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="res/screen/android/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
+
+
+    <!--  falta definir mais splashscrenn para ios bem como os landscape -->
+<!--   
+    <gap:splash src="res/screen/ios/screen-iphone-portrait.png"         gap:platform="ios"     width="320" height="480" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-2x.png"      gap:platform="ios"     width="640" height="960" />
+    <gap:splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" gap:platform="ios"     width="640" height="1136" />
+    <gap:splash src="res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
+    <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
+
+-->
+    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
+    <string>100</string>
+    </gap:config-file>
+
+        <!--
+        Definir o acesso a domínios externos.
+        <access />            - a tag de acesso em branco nega acesso a todos os recursos externos.
+        <access origin="*" /> - a tag acesso universal permite o acesso a todos os recursos externos.
+       Caso contrário, você pode especificar domínios específicos:
+        <access origin="http://phonegap.com" />                    - permitir que quaisquer solicitações seguras para http://phonegap.com/
+        <access origin="http://phonegap.com" subdomains="true" />  - o mesmo que acima, mas incluindo subdomínios, como http://build.phonegap.com/
+        <access origin="http://phonegap.com" browserOnly="true" /> - Só permite http://phonegap.com a ser aberto pelo navegador da criança.
+    -->
+
+    <access origin="*"/>
+    <!-- Adicionado os seguintes intenções para apoiar a remoção de código whitelist de Cordova base para um plugin -->
+    <!-- Whitelist Configuração. Consulte https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+
+</widget>
